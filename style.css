@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+a
+{
+  --background-color: green;
+}
+
+a:link
+{
+  color: black;
+  text-decoration: none;
+}
+
+a.navlink:hover
+{
+  animation-name: grad-anim;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  background-size: 400%;
+  background-image: linear-gradient(to right, rgb(0,0,0,0), rgb(0,0,0,0), white, rgba(0,0,0,0), rgb(0,0,0,0));
+}
+
+:visited
+{
+  color: black;
+}
+
+main
+{
+  margin-top: 68px;
+  background-color: #E5EEF0;
+}
+
+body
+{
+  background-color: gray;
+  margin: 0%;
+  font-family: 'Roboto', sans-serif;
+}
+
+footer
+{
+  display: flex;
+  background-color: #566A8A;
+  padding: 10px;
+  border-top: 2px solid rgba(0,0,0, .5);
+}
+
+#welcome-section
+{
+  background-image: url(https://i.imgur.com/bPcxBrX.jpg);
+  --background-position: center center;
+  background-color: #66B752; 
+  height: 100vh;
+  font-size: 90px;
+  text-align: center;
+  margin-top: -100px;
+}
+
+#contact
+{
+  background-color: #93A3BC;
+  height: 30vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 100px);
+  grid-template-rows: repeat(auto-fit, 100px);
+  grid-gap: 30px;
+  justify-content: center;
+  align-content: center;
+  margin: 0;
+}
+
+#navbar
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  position: fixed;
+  background-color: #5D579E;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  padding: 0px;
+  font-size: 25px;
+  z-index: 2;
+  border-bottom: 2px solid rgba(0,0,0,.5);
+}
+
+.contact-head
+{
+  text-align: center;
+  margin-bottom: -50px;
+}
+
+.project-container
+{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 300px);
+  grid-template-rows: repeat(auto-fit, 300px);
+  grid-gap: 20px;
+  background-color: #E5EEF0;
+  height: 90vh;
+  justify-content: center;
+  align-content: center;
+}
+
+.proj-head
+{
+  text-align: center;
+  padding-top: 80px; 
+  margin-top: -60px;
+}
+
+.project-tile
+{
+  position: relative;
+  background-repeat: no-repeat; 
+  padding: 0px;
+  background-color: #93A3BC;
+  border-radius: 15%;
+  background-size: 100% 83%;
+}
+
+.tile-text
+{ 
+  position: absolute;
+  top: 250px;
+  left: 10%;
+}
+
+.links
+{
+  border-radius: 22%;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.navlink
+{
+  padding: 20px 60px;
+}
+
+.first-text
+{
+  animation-name: slide;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
+.second-text
+{
+  animation-name: slide2;
+  animation-duration:  4s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slide
+{
+  0%
+  {
+    transform: translateY(0vh);
+    color: rgba(255,255,255, 0.0)
+  }
+  
+  100%
+  {
+    transform: translateY(28vh);
+    color: rgba(255,255,255,1.0)
+  }
+}
+
+@keyframes slide2
+{
+  0%
+  {
+    transform: translateY(0vh);
+    color: rgba(255,255,255, 0.0)
+  }
+  
+  100%
+  {
+    transform: translateY(18vh);
+    color: rgba(255,255,255,1.0)
+  }
+}
+
+@keyframes grad-anim
+{
+  0%
+  {
+    background-position: right;
+  }
+  
+  100%
+  {
+    background-position: left;
+  }
+}
+
+@media(max-width: 720px)
+{
+  #welcome-section
+  {
+    font-size: 78px;
+    height: 101vh;
+  }
+}
+
+@media (max-width: 650px)
+{
+  .navlink
+  {
+    padding: 20px 20px;
+  }
+  
+  .project-container
+  {
+    grid-template-columns: repeat(auto-fit, 150px);
+    grid-template-rows: repeat(auto-fit, 150px);
+    height: 50vh;
+  }
+  
+  .tile-text
+  {
+    top: 120px;
+    font-size: 12px;
+  }
+}
